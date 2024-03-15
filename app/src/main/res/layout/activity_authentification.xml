@@ -1,0 +1,77 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/partieUn"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:layout_gravity="center"
+    android:orientation="vertical"
+    android:padding="16dp"
+    tools:context=".Authentification">
+
+    <EditText
+        android:id="@+id/CodeVisiteur"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:ems="10"
+        android:hint="codeVisiteur"
+        android:inputType="number"
+        android:layout_gravity="center"
+        android:padding="16dp" />
+
+    <Button
+        android:id="@+id/OK"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:onClick="valider"
+        android:text="OK"
+        android:layout_gravity="center"
+        android:padding="16dp"/>
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:id="@+id/partieDeux"
+        android:orientation="vertical"
+        android:visibility="invisible"
+        >
+
+            <EditText
+                android:id="@+id/codeGenerer"
+                android:layout_width="170dp"
+                android:layout_height="wrap_content"
+                android:hint="code Generer"
+                android:layout_gravity="center"
+                android:padding="16dp"
+                android:visibility="invisible"
+                />
+
+            <EditText
+                android:id="@+id/codeRandom"
+                android:layout_width="244dp"
+                android:layout_height="80dp"
+                android:ems="10"
+                android:hint="code random"
+                android:inputType="text"
+                android:layout_gravity="center"
+                android:padding="16dp" />
+
+            <Button
+                android:id="@+id/buttonValiderCode"
+                android:layout_width="wrap_content"
+                android:layout_height="73dp"
+                android:onClick="Validercode"
+                android:text="Valider "
+                android:layout_gravity="center"
+                android:padding="16dp" />
+    </LinearLayout>
+
+    <Button
+        android:id="@+id/quitter"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+
+        android:onClick="Quitter"
+        android:text="Quitter" />
+</LinearLayout>
