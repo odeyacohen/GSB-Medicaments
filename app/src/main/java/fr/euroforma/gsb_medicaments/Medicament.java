@@ -56,10 +56,11 @@ public class Medicament {
         this.titulaires = titulaires;
     }
 
-
+    // Getter et Setter pour StatutAdmnistratif
     public String getStatutAdmnistratif(){return statutAdmnistratif; }
 
     public void setStatutAdministratif(String statutAdmnistratif) { this.statutAdmnistratif= statutAdmnistratif;}
+    // Getter et Setter pour nbmolecule
     public String getNbMolecule(){return NbMolecule; }
 
     public void setNbMolecule(String NbMolecule) { this.NbMolecule= NbMolecule;}

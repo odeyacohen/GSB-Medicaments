@@ -10,6 +10,8 @@ import java.util.List;
 
 public class MedicamentAdapter extends ArrayAdapter<Medicament> {
 
+    private int nbMolecule;
+
     public MedicamentAdapter(Context context, List<Medicament> medicaments) {
         super(context, 0, medicaments);
     }
@@ -38,7 +40,12 @@ public class MedicamentAdapter extends ArrayAdapter<Medicament> {
         tvFormePharmaceutique.setText(medicament.getFormePharmaceutique());
         tvVoiesAdmin.setText(medicament.getVoiesAdmin());
         tvTitulaires.setText(medicament.getTitulaires());
-        tvNbMolecule.setText("molecule : " +medicament.getNbMolecule());
+
+        nbMolecule= Integer.parseInt(medicament.getNbMolecule());
+        if(nbMolecule > 1 ){
+            tvNbMolecule.setText(medicament.getNbMolecule()+  " molécules" );
+        }else{
+        tvNbMolecule.setText(medicament.getNbMolecule()+  " molécule" );}
         tvStatutAdministratif.setText(medicament.getStatutAdmnistratif());
 
         // Return the completed view to render on screen
